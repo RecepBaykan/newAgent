@@ -1,0 +1,117 @@
+.MainPageStyle {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.scroll-lock {
+  pointer-events: none; /* Tıklamaları devre dışı bırakır */
+}
+
+.container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  scrollbar-width: none; /* Firefox için scroll barını gizle */
+  -ms-overflow-style: none; /* Internet Explorer için scroll barını gizle */
+}
+
+.container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari ve Edge için scroll barını gizle */
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.Main {
+  background-image: url("/1.jpg");
+}
+
+.News {
+  background-image: url("/2.jpg");
+}
+
+.Patchs {
+  background-image: url("/3.jpg");
+}
+
+.Events {
+  background-image: url("/4.jpg");
+}
+
+.Agents {
+  background-image: url("/5.jpg");
+}
+
+.Maps {
+  background-image: url("/6.jpg");
+}
+
+.Weapons {
+  background-image: url("/7.jpg");
+}
+
+.messageBody {
+  margin: 0;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.message {
+  font-size: 48px;
+  font-weight: bold;
+  color: #eee;
+}
+
+.pattern {
+  position: absolute; /* veya relative */
+  top: 0;
+  left: 0;
+  width: 100%; /* Tüm genişliği kapsayacak şekilde */
+  height: 100%; /* Tüm yüksekliği kapsayacak şekilde */
+  z-index: 1; /* İçeriklerin altında değil, üstünde yer alması için */
+  --color: rgba(0, 115, 19, 0.3);
+  background-color: #191a1a;
+  background-image: linear-gradient(
+      180deg,
+      transparent 24%,
+      var(--color) 25%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      45deg,
+      transparent 24%,
+      var(--color) 35%,
+      var(--color) 26%,
+      transparent 17%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
+    );
+  background-size: 55px 55px;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+

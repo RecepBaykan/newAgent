@@ -1,0 +1,21 @@
+.menu{
+
+}
+
+.menuSelect{
+
+}
+
+
+.imageButton{
+    border: none; /* Kenarlık yok */
+    padding: 0; /* İç boşluk yok */
+    background: none; /* Arka plan yok */
+    cursor: pointer;    
+}
+
+.imageButton img {
+    display: block; /* Resmi tam olarak yerleştirir */
+    width: 100%; /* Buton genişliği kadar */
+    height: auto; /* Oran korunarak yükseklik ayarlanır */
+  }

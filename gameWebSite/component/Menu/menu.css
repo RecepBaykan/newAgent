@@ -1,0 +1,35 @@
+.menuContainer {
+  display: flex;
+  gap: 10px; /* Menü öğeleri arasındaki boşluk */
+}
+
+.imageButton {
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.imageWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.menuItem {
+  display: block;
+  width: 90px; /* Resim genişliği */
+  height: auto;
+}
+
+.menuText {
+  position: absolute;
+  bottom: 10px; /* Yazının alt kenarından olan boşluk */
+  left: 50%;
+  transform: translateX(-50%); /* Yazıyı yatayda ortalar */
+  color: white; /* Yazı rengi */
+  padding: 5px; /* Yazının etrafındaki iç boşluk */
+  text-align: center; /* Yazıyı ortalar */
+  font-size: 14px; /* Yazı boyutu */
+ 
+}

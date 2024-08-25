@@ -1,0 +1,341 @@
+.sidebar {
+  width: 200px;
+
+  background-color: rgba(13, 18, 22, 0.17);
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto; /* Kaydırma çubuğu ekler */
+  max-height: 80vh;
+}
+
+.sidebarRight {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  background-color: rgba(13, 18, 22, 0.17);
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  position: fixed;
+  right: -220px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: right 0.3s ease-in-out;
+}
+
+.sidebarRight.show {
+  right: 0;
+}
+
+.sidebarCenter {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  background-color: rgba(13, 18, 22, 0.17);
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.operator {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.operator.selected {
+  border-style: solid;
+  border-color: yellow;
+}
+
+.operator-image {
+  width: 100%;
+  height: 100px;
+  position: relative;
+}
+
+.operator-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.operator-name {
+  font-size: 16px;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2px 5px;
+  border-radius: 3px;
+  color: white;
+}
+
+.card {
+  font-size: 14px;
+}
+
+h2 {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Poiret+One&family=Poppins:wght@400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+.App {
+  perspective: 1000px;
+  height: 100vh;
+}
+.Page {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  transition: 1s ease;
+}
+.Page-hero {
+  position: absolute;
+  bottom: 0;
+  margin: auto;
+  height: 100%;
+  z-index: 2;
+}
+.Page-top,
+.Page-bottom {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.Page-top > img {
+  filter: invert(100%);
+  height: 60px;
+}
+.Page-top > span {
+  font-size: 2.5rem;
+  color: white;
+  font-family: "Poiret One", cursive;
+}
+.Page-marvel-logo {
+  letter-spacing: -10px;
+  line-height: 150px;
+  font-size: 13rem;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 900;
+  border: 5px solid #ffffff77;
+  color: #ffffff77;
+  padding-bottom: 10px;
+  padding-right: 15px;
+}
+.Page-bottom {
+  line-height: 20px;
+  color: #ffffe3;
+}
+.hide {
+  transform: translateY(-1000px) rotateX(50deg);
+  pointer-events: none;
+}
+.Nav {
+  position: absolute;
+  right: 1%;
+  top: 50%;
+  z-index: 100;
+  transform: translateY(-50%);
+}
+.NavButton {
+  height: 20px;
+  width: 20px;
+  display: block;
+  border-radius: 50%;
+  border: none;
+  background-color: white;
+  margin: 10px;
+  cursor: pointer;
+}
+.NavButton.active {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* From Uiverse.io by Cornerstone-04 */
+.box {
+  width: 50px;
+  height: auto;
+  float: left;
+  transition: 0.5s linear;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  margin: 0 5px;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+.box:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
+
+.box:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+}
+
+.box:hover {
+  box-shadow: 0 5px 10px white;
+}
+
+.box:hover:before {
+  border-color: white;
+  height: 100%;
+  transform: translateX(0);
+  transition: 0.3s transform linear, 0.3s height linear 0.3s;
+}
+
+.box:hover:after {
+  border-color: white;
+  height: 100%;
+  transform: translateX(0);
+  transition: 0.3s transform linear, 0.3s height linear 0.5s;
+}
+
+.buttonBar {
+  color: #eee;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+/* From Uiverse.io by nikk7007 */
+.greenButton {
+  padding: 0.8em 1.8em;
+  border: 2px solid #eee;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 11px;
+  margin-right: 10px;
+  transition: 0.3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #eee;
+}
+
+.greenButton::before {
+  content: "";
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #eee;
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.greenButton:hover::before {
+  width: 105%;
+}
+
+.greenButton:hover {
+  color: #111;
+}
+
+.login {
+  margin-left: 500px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  position: relative; 
+}
+
+
+.dropdown-content {
+  position: absolute; /* Login butonuna göre yerleştirme */
+  top: 100%; /* Butonun altına yerleştirme */
+  left: 90%; /* Butonun ortasına hizalama */
+  transform: translateX(-50%); /* Orta hizalamayı tam yapmak için translate kullanıyoruz */
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  color: #fff;
+  z-index: 100;
+}
+
+
+
+.sidebarRight{
+  transform: translateY(-40%);
+  opacity: 0;
+  animation: showContent 0.1s linear 1 forwards; /* Süreyi 0.2s olarak değiştirdik */
+}
+
+@keyframes showContent {
+  to {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
+

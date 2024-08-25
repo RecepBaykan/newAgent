@@ -1,0 +1,74 @@
+
+
+.bottom-menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  z-index: 3;
+}
+
+.span {
+  display: inline-block;
+  transform: skew(21deg);
+}
+
+.button {
+  position: relative;
+  background: #fff;
+  border: none;
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  width: 120px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transform: skew(-21deg);
+  overflow: hidden; /* Taşan içeriği gizler */
+}
+
+/* Hover efekti */
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  background: rgb(20, 20, 20);
+ 
+}
+
+.button:hover::before {
+  right: 0;
+  left: 0;
+  opacity: 1;
+}
+
+.button:hover {
+  color: #fff;
+}
+
+/* id 4 için özel stil */
+.play {
+  background: #008fff; /* Mavi arka plan */
+  color: #fff; /* Beyaz metin */
+  font-size: 18px; /* Daha büyük yazı tipi */
+  width: 150px; /* Daha geniş buton */
+  z-index: 100;
+}
+
+/* Butona özel hover efekti */
+.button.play:hover::before {
+  background: #0056b3; /* Koyu mavi hover efekti */
+}
+
+
+.button.active {
+  background-color: #4CAF50; /* Aktif butonun arka plan rengini yeşil yapmak için */
+  color: white;
+}
